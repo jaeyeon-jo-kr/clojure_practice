@@ -2,6 +2,6 @@
 
 (fn [x & n]
   (let [arr (conj n x)]
-  (and
-    (not= nil (some (fn [x] (= x true)) arr))
-    (not-every? (fn [x] (= x true)) arr))))
+   (and
+     (not= nil (some (fn [x] (= x true)) arr))
+     (not-every? (fn [x] (= x true)) arr))))
