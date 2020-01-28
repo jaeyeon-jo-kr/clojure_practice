@@ -1,0 +1,3 @@
+(fn [x y]
+    (require '[clojure.set :as cset :refer [union]])
+    (cset/union (cset/difference x y) (cset/difference y x)))
