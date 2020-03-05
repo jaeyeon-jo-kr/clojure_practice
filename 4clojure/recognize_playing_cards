@@ -1,0 +1,16 @@
+(fn [string]
+  (assoc {}
+    :suit
+    (condp = (first string)
+      \D :diamond
+      \H :heart
+      \C :club
+      \S :spade)
+    :rank
+    (condp = (second string)
+      \A 1
+      \T 10
+      \Q 11
+      \J 12
+      \K 13
+      (= (- (int (second string)) (int \0)))
