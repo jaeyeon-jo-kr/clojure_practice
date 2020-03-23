@@ -20,3 +20,14 @@
 ;instance?
 ;getClass
 
+
+;;              list vector set map
+;; reversible?   f     t     f   f
+;; associative?  f     t     f   t
+
+(fn [c]
+    (cond
+      (and (reversible? c) (associative? c)) :vector
+      (and (not (reversible? c)) (associative? c)) :map
+      (= 2 (count (conj (empty c) 1 1))) :list
+      :else :set))
