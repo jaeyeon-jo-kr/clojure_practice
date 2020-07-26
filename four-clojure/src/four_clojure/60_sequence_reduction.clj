@@ -1,4 +1,4 @@
-(ns 60_sequence_reduction)
+(ns four-clojure.60-sequence-reduction)
 
 
 ;; Write a function which behaves like reduce,
@@ -13,10 +13,16 @@
 
 ;; (= (last (__ * 2 [3 4 5])) (reduce * 2 [3 4 5]) 120)
 
-(fn f ([g y]
-       (f g [(first y)] (rest y)))
-    ([g x y]
-     (if
-       (empty? y)
-       x
-       ((f (lazy-seq (conj x (g (last x) y))) (rest y))))))
+(fn my-reduct
+  ([f coll]
+   (lazy-seq
+     (if (not-empty coll)
+       (my-reduct f (first coll) (rest coll))
+       ((f) coll)))
+   ([f init coll]
+    (if (empty? coll)
+      init
+    (cons init
+          (lazy-seq
+                 (when-let [s (seq coll)]
+                   (my-reduct f (f init (first s)) (rest s)))))))))
