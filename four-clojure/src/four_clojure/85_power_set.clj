@@ -9,15 +9,28 @@
 ;;   #{#{} #{1} #{2} #{3} #{1 2} #{1 3} #{2 3} #{1 2 3}})
 ;;(= (count (__ (into #{} (range 10)))) 1024)
 
-(fn my-set [src]
-  (cond
-    (empty? src) #{#{}}
-    (= 1 (count src)) #{src #{}}
-    :else (reduce
-            (fn [col el]
-              (-> (into col (my-set (disj src el)))
-                  (conj src)))
-            #{} src)))
+(comment (apply conj #{s} (map hash-set s)))
+
+(defn a [s]
+  {:pre [(set? s)]}
+  (if (empty? s)
+    #{s}
+    (do (println s)
+        (print "apply into : ")
+        (print #{s} " ")
+        (println (mapv #(a (disj s %)) s))
+        (try
+          (union into #{s} (mapv #(a (disj s %)) s))
+          (catch Exception e (.printStackTrace e))))))
+
+
+(defn powerset [ls]
+  (if (empty? ls) '(())
+                  (union (powerset (next ls))
+                         (map #(conj % (first ls)) (powerset (next ls))))))
+
+
+
 (comment
   (fn [src]
     (loop [res #{}
