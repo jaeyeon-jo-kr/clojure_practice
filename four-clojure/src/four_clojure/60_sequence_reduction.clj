@@ -13,16 +13,20 @@
 
 ;; (= (last (__ * 2 [3 4 5])) (reduce * 2 [3 4 5]) 120)
 
-(fn my-reduct
-  ([f coll]
-   (lazy-seq
-     (if (not-empty coll)
-       (my-reduct f (first coll) (rest coll))
-       ((f) coll)))
-   ([f init coll]
-    (if (empty? coll)
-      init
-    (cons init
-          (lazy-seq
-                 (when-let [s (seq coll)]
-                   (my-reduct f (f init (first s)) (rest s)))))))))
+(def solution
+  (fn r
+    ([f a]
+     (if (empty? a)
+       (lazy-seq (r (first a) (last a)))
+       (list (f))))
+    ([f a b]
+     (cons a (lazy-seq
+               (when (seq b)
+                 (r f (f a (first b) (rest b)))))))))
+
+
+
+
+
+
+
