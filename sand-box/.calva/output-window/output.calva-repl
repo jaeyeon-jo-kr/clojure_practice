@@ -1,0 +1,272 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj::sand-box.core=>  ; Use `alt+enter` to evaluate
+
+; Jack-in done.
+clj::sand-box.core=> 
+#namespace[joy.ns]
+clj::joy.ns=> 
+#'joy-of-clojure/authors
+clj::joy-of-clojure=> 
+#namespace[your-ns]
+clj::your-ns=> 
+nil
+clj::joy-of-clojure=> 
+nil
+clj::joy-of-clojure=> 
+#'joy.ns/authors
+clj::joy.ns=> 
+nil
+clj::joy-of-clojure=> 
+nil
+clj::joy-of-clojure=> 
+; Syntax error compiling at (src/sand_box/joy-of-clojure.clj:1:8076).
+; No such var: joy.ns/authors
+clj::joy-of-clojure=> 
+; Syntax error compiling at (src/sand_box/joy-of-clojure.clj:1:8076).
+; No such var: joy.ns/authors
+clj::joy-of-clojure=> 
+; Syntax error compiling at (src/sand_box/joy-of-clojure.clj:1:8076).
+; No such var: joy.ns/authors
+clj::joy-of-clojure=> 
+(in-ns 'joy.ns)
+#namespace[joy.ns]
+clj::joy.ns=> 
+(def authors ["Chouser"])
+#'joy.ns/authors
+clj::joy.ns=> 
+(in-ns 'your.ns)
+#namespace[your.ns]
+clj::your.ns=> 
+(clojure.core/refer 'joy.ns)
+nil
+clj::your.ns=> 
+joy.ns/authors
+["Chouser"]
+clj::your.ns=> 
+(in-ns 'joy.ns)
+#namespace[joy.ns]
+clj::joy.ns=> 
+(clojure.core/refer 'joy.ns)
+nil
+clj::joy.ns=> 
+(in-ns 'joy.ns)
+#namespace[joy.ns]
+clj::joy.ns=> 
+(def authors ["Chouser" "Fogus"])
+#'joy.ns/authors
+clj::joy.ns=> 
+(in-ns 'your.ns)
+#namespace[your.ns]
+clj::your.ns=> 
+joy.ns/authors
+["Chouser" "Fogus"]
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+["Chouser" "Fogus"]
+clj::joy-of-clojure=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+(def)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+()
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+(d)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+ef 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+b
+clj::your.ns=> 
+ 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+
+
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:79:8).
+; Unable to resolve symbol: create-ns in this context
+clj::your.ns=> 
+(def b (create-ns 'bonobo))
+#'joy-of-clojure/b
+clj::joy-of-clojure=> 
+b
+#namespace[bonobo]
+clj::joy-of-clojure=> 
+(ns-map b (create-ns 'String))
+String
+clj::joy-of-clojure=> 
+; Execution error (ArityException) at joy-of-clojure/eval16784 (form-init2206981302522229688.clj:149).
+; Wrong number of args (2) passed to: clojure.core/ns-map
+clj::joy-of-clojure=> 
+(intern b 'x 9)
+#'bonobo/x
+clj::joy-of-clojure=> 
+(bonobo/x)
+9
+clj::joy-of-clojure=> 
+(intern b 'reduce clojure.core/reduce)
+#function[clojure.core/reduce]
+clj::joy-of-clojure=> 
+(intern b '+ clojure.core/+)
+#function[clojure.core/+]
+clj::joy-of-clojure=> 
+(in-ns 'bonobo)
+#namespace[bonobo]
+clj::bonobo=> 
+(reduce + [1 2 3 4 5])
+4
+clj::bonobo=> 
+(in-ns 'user)
+#namespace[user]
+clj::user=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:170:1).
+; Unable to resolve symbol: reduce in this context
+clj::bonobo=> 
+(get (ns-map 'bonobo) 'reduce)
+nil
+clj::user=> 
+(in-ns 'user)
+#namespace[user]
+clj::user=> 
+(def b (create-ns 'bonobo))
+#'user/b
+clj::user=> 
+(+ 1 1)
+2
+clj::user=> 
+(get (ns-map 'bonobo))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:188:6).
+; Unable to resolve symbol: in-map in this context
+clj::user=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:188:6).
+; Unable to resolve symbol: in-map in this context
+clj::user=> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:188:6).
+; Unable to resolve symbol: in-map in this context
+clj::user=> 
+(get (ns-map 'bonobo) 'reduce)
+nil
+clj::user=> 
+(intern b 'reduce clojure.core/reduce)
+#'bonobo/reduce
+clj::user=> 
+(get (ns-map 'bonobo) 'reduce)
+#'bonobo/reduce
+clj::user=> 
+(ns-unmap 'bonobo 'reduce)
+nil
+clj::user=> 
+(get (ns-map 'bonobo) 'reduce)
+nil
+clj::user=> 
+(remove-ns 'bonobo)
+#namespace[bonobo]
+clj::user=> 
+(all-ns)
+(#namespace[clj-kondo.impl.rewrite-clj.node.integer]
+ #namespace[cider.nrepl.inlined-deps.orchard.v0v5v5.orchard.query]
+ #namespace[cider.nrepl.middleware.track-state]
+ #namespace[clj-kondo.impl.analyzer.spec]
+ #namespace[clojure.stacktrace]
+ #namespace[clj-kondo.impl.rewrite-clj.node.meta]
+ #namespace[cider.nrepl.middleware.util.nrepl]
+ #namespace[clojure.test]
+ #namespace[cider.nrepl.inlined-deps.toolsreader.v1v3v2.clojure.tools.reader]
+ #namespace[clj-kondo.impl.rewrite-clj.node.whitespace]
+ #namespace[clojure.core.server]
+ #namespace[cider.nrepl.inlined-deps.orchard.v0v5v5.orchard.java]
+ #namespace[clj-kondo.impl.analyzer.common]
+ #namespace[your-ns]
+ #namespace[nrepl.server]
+ #namespace[clj-kondo.impl.rewrite-clj.node.keyword]
+ #namespace[clj-kondo.impl.rewrite-clj.node.fn]
+ #namespace[nrepl.middleware.session]
+ #namespace[cider.nrepl.middleware.util.coerce]
+ #namespace[clj-kondo.impl.rewrite-clj.reader]
+ #namespace[clj-kondo.impl.overrides]
+ #namespace[your.ns]
+ #namespace[clojure.reflect]
+ #namespace[cider.nrepl.middleware.inspect]
+ #namespace[nrepl.middleware.caught]
+ #namespace[cider.nrepl.inlined-deps.toolsnamespace.v0v3v1.clojure.tools.namespace.parse]
+ #namespace[clojure.spec.alpha]
+ #namespace[clojure.set]
+ #namespace[cider.nrepl.inlined-deps.orchard.v0v5v5.orchard.inspect]
+ #namespace[cider.nrepl.inlined-deps.orchard.v0v5v5.orchard.cljs.analysis]
+ #namespace[clj-kondo.impl.analyzer.core-async]
+ #namespace[clj-kondo.impl.analyzer.test]
+ #namespace[joy.ns]
+ #namespace[clj-kondo.impl.rewrite-clj.parser.keyword]
+ #namespace[cider.nrepl.middleware.stacktrace]
+ #namespace[clj-kondo.impl.rewrite-clj.node.reader-macro]
+ #namespace[nrepl.ack]
+ #namespace[clojure.java.browse]
+ #namespace[clj-kondo.impl.rewrite-clj.node.regex]
+ #namespace[datalog.parser.util]
+ #namespace[cider.nrepl.inlined-deps.toolsreader.v1v3v2.clojure.tools.reader.impl.inspect]
+ #namespace[clojure.repl]
+ #namespace[clj-kondo.impl.rewrite-clj.node.protocols]
+ #namespace[clj-kondo.impl.var-info-gen]
+ #namespace[joy-of-clojure]
+ #namespace[clj-kondo.impl.rewrite-clj.node.string]
+ #namespace[cider.nrepl.inlined-deps.orchard.v0v5v5.orchard.java.parser]
+ #namespace[clj-kondo.impl.utils]
+ #namespace[cider.nrepl.inlined-deps.cljs-tooling.v0v3v1.cljs-tooling.info]
+ #namespace[cider.nrepl.inlined-deps.javaclasspath.v0v3v0.clojure.java.classpath]
+ ...)
+clj::user=> 
+()

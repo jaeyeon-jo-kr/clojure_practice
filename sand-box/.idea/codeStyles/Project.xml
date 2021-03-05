@@ -1,0 +1,17 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <ClojureCodeStyleSettings>{
+  :change/-&gt; 2
+  :change/-&gt;&gt; 4
+  :change/defn :only-indent
+  :change/reduce 2
+  :clojure.core/case 0
+  :clojure.core/let :only-indent
+  :clojurewerkz.machine-head.client/publish 0
+  :cursive.formatting/align-binding-forms true
+  :farota-clojure.domain.valve/if 0
+  :farota-clojure.interfaces/device-command 1000
+  :rill.wheel/commit! 0
+}</ClojureCodeStyleSettings>
+  </code_scheme>
+</component>

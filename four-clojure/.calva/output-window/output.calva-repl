@@ -1,0 +1,698 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :dependencies conj '[clj-kondo,"2020.04.05"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.25.6"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉four-clojure.core꞉> 
+; Jack-in done.
+clj꞉four-clojure.core꞉> 
+; Syntax error compiling at (aoc2020day12.clj:131:3).
+; Unable to resolve symbol: navigate in this context
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:89).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+*e
+#error {
+ :cause nil
+ :via
+ [{:type java.lang.NullPointerException
+   :message nil
+   :at [clojure.lang.Numbers ops "Numbers.java" 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops "Numbers.java" 1068]
+  [clojure.lang.Numbers minus "Numbers.java" 162]
+  [clojure.core$_ invokeStatic "core.clj" 1051]
+  [clojure.core$_ invoke "core.clj" 1043]
+  [aoc2020.aoc2020day12$turn invokeStatic "aoc2020day12.clj" 89]
+  [aoc2020.aoc2020day12$turn invoke "aoc2020day12.clj" 84]
+  [aoc2020.aoc2020day12$action invokeStatic "aoc2020day12.clj" 117]
+  [aoc2020.aoc2020day12$action invoke "aoc2020day12.clj" 109]
+  [clojure.lang.ArrayChunk reduce "ArrayChunk.java" 63]
+  [clojure.core.protocols$fn__8139 invokeStatic "protocols.clj" 136]
+  [clojure.core.protocols$fn__8139 invoke "protocols.clj" 124]
+  [clojure.core.protocols$fn__8099$G__8094__8108 invoke "protocols.clj" 19]
+  [clojure.core.protocols$seq_reduce invokeStatic "protocols.clj" 31]
+  [clojure.core.protocols$fn__8131 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8131 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8073$G__8068__8086 invoke "protocols.clj" 13]
+  [clojure.core$reduce invokeStatic "core.clj" 6828]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [aoc2020.aoc2020day12$navigate invokeStatic "aoc2020day12.clj" 121]
+  [aoc2020.aoc2020day12$navigate invoke "aoc2020day12.clj" 119]
+  [aoc2020.aoc2020day12$eval14183 invokeStatic "form-init14045267555797649274.clj" 131]
+  [aoc2020.aoc2020day12$eval14183 invoke "form-init14045267555797649274.clj" 131]
+  [clojure.lang.Compiler eval "Compiler.java" 7176]
+  [clojure.lang.Compiler eval "Compiler.java" 7131]
+  [clojure.core$eval invokeStatic "core.clj" 3214]
+  [clojure.core$eval invoke "core.clj" 3210]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964$fn__965 invoke "interruptible_eval.clj" 87]
+  [clojure.lang.AFn applyToHelper "AFn.java" 152]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 665]
+  [clojure.core$with_bindings_STAR_ invokeStatic "core.clj" 1973]
+  [clojure.core$with_bindings_STAR_ doInvoke "core.clj" 1973]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964 invoke "interruptible_eval.clj" 87]
+  [clojure.main$repl$read_eval_print__9068$fn__9071 invoke "main.clj" 414]
+  [clojure.main$repl$read_eval_print__9068 invoke "main.clj" 414]
+  [clojure.main$repl$fn__9077 invoke "main.clj" 435]
+  [clojure.main$repl invokeStatic "main.clj" 435]
+  [clojure.main$repl doInvoke "main.clj" 345]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__995$fn__999 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1062$fn__1066 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1062 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 834]]}
+clj꞉aoc2020.aoc2020day12꞉> 
+((:R 90)
+ (:S 1)
+ (:R 90)
+ (:W 2)
+ (:S 3)
+ (:L 270)
+ (:L 90)
+ (:S 2)
+ (:F 2)
+ (:L 90)
+ (:W 2)
+ (:S 5)
+ (:E 2)
+ (:S 5)
+ (:F 42)
+ (:W 5)
+ (:L 90)
+ (:F 15)
+ (:R 90)
+ (:S 2)
+ (:F 76)
+ (:E 1)
+ (:F 26)
+ (:R 90)
+ (:W 1)
+ (:L 90)
+ (:W 1)
+ (:F 20)
+ (:L 180)
+ (:F 38)
+ (:S 2)
+ (:W 5)
+ (:F 13)
+ (:N 3)
+ (:E 2)
+ (:N 4)
+ (:L 90)
+ (:N 1)
+ (:E 4)
+ (:L 90)
+ (:E 2)
+ (:F 21)
+ (:R 90)
+ (:N 5)
+ (:F 78)
+ (:E 3)
+ (:L 90)
+ (:W 4)
+ (:S 2)
+ (:R 180)
+ ...)
+clj꞉aoc2020.aoc2020day12꞉> 
+-10
+clj꞉aoc2020.aoc2020day12꞉> 
+-10
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+((:R 90) (:S 1) (:R 90) (:W 2) (:S 3) (:L 270) (:L 90) (:S 2) (:F 2) (:L 90) (:W 2) (:S 5) (:E 2) (:S 5) (:F 42) (:W 5) (:L 90) (:F 15) (:R 90) (:S 2) (:F 76) (:E 1) (:F 26) (:R 90) (:W 1) (:L 90) (:W 1) (:F 20) (:L 180) (:F 38) (:S 2) (:W 5) (:F 13) (:N 3) (:E 2) (:N 4) (:L 90) (:N 1) (:E 4) (:L 90) (:E 2) (:F 21) (:R 90) (:N 5) (:F 78) (:E 3) (:L 90) (:W 4) (:S 2) (:R 180) (:F 53) (:E 5) (:F 42) (:N 1) (:R 90) (:F 70) (:E 1) (:N 5) (:W 4) (:S 5) (:R 90) (:W 3) (:L 90) (:F 74) (:E 5) (:L 180) (:L 90) (:S 5) (:F 51) (:W 4) (:F 33) (:N 5) (:F 55) (:L 90) (:W 3) (:R 180) (:E 3) (:N 4) (:E 3) (:R 180) (:E 2) (:N 2) (:W 4) (:L 90) (:F 13) (:W 3) (:S 2) (:W 4) (:F 89) (:L 90) (:F 92) (:R 90) (:N 5) (:R 90) (:W 3) (:N 1) (:R 90) (:N 3) (:F 38) (:W 3) (:L 90) (:W 3) (:S 2) (:R 90) (:E 1) (:F 24) (:L 90) (:F 70) (:E 4) (:S 1) (:R 90) (:E 4) (:S 2) (:F 3) (:W 4) (:N 3) (:E 1) (:L 180) (:F 10) (:E 5) (:F 5) (:N 4) (:F 83) (:F 98) (:E 1) (:N 4) (:E 2) (:E 1) (:L 180) (:W 2) (:F 29) (:N 4) (:L 90) (:E 2) (:F 66) (:N 2) (:W 5) (:L 180) (:E 4) (:F 24) (:L 180) (:N 3) (:S 1) (:E 4) (:L 180) (:N 3) (:R 90) (:F 84) (:F 25) (:N 4) (:E 5) (:N 4) (:E 4) (:F 37) (:L 180) (:F 50) (:L 90) (:E 4) (:L 90) (:S 2) (:R 90) (:N 1) (:L 90) (:E 1) (:N 3) (:F 59) (:R 90) (:N 2) (:E 3) (:S 2) (:R 90) (:F 25) (:L 90) (:W 5) (:F 6) (:E 2) (:F 5) (:N 3) (:L 90) (:W 2) (:F 18) (:R 90) (:N 5) (:F 10) (:N 5) (:R 90) (:E 4) (:L 90) (:N 3) (:F 61) (:W 2) (:F 77) (:R 180) (:F 76) (:W 5) (:N 5) (:S 5) (:L 180) (:F 90) (:R 90) (:E 1) (:S 1) (:E 2) (:L 90) (:F 12) (:S 5) (:F 10) (:R 90) (:S 1) (:E 1) (:L 90) (:F 51) (:S 4) (:W 4) (:F 6) (:R 90) (:W 2) (:F 62) (:R 180) (:S 5) (:E 1) (:R 90) (:N 5) (:F 37) (:E 5) (:F 41) (:R 90) (:E 3) (:S 5) (:E 5) (:N 2) (:N 5) (:R 90) (:W 2) (:S 3) (:W 3) (:R 90) (:F 9) (:R 90) (:E 4) (:L 90) (:N 3) (:F 9) (:R 180) (:S 3) (:R 90) (:W 3) (:F 100) (:F 58) (:L 180) (:N 2) (:L 90) (:S 1) (:W 1) (:N 1) (:W 2) (:S 5) (:E 2) (:W 3) (:F 44) (:R 90) (:F 11) (:R 90) (:E 4) (:S 5) (:R 270) (:F 20) (:S 4) (:F 90) (:L 90) (:E 1) (:S 4) (:E 2) (:L 90) (:S 3) (:F 69) (:L 90) (:F 79) (:E 3) (:R 180) (:F 22) (:E 2) (:F 71) (:S 3) (:L 90) (:F 58) (:E 2) (:S 4) (:L 90) (:S 1) (:E 4) (:L 180) (:F 86) (:N 5) (:R 90) (:F 57) (:L 180) (:W 1) (:L 90) (:F 64) (:S 1) (:W 2) (:R 180) (:E 3) (:F 26) (:W 5) (:R 90) (:S 5) (:E 3) (:F 66) (:L 180) (:F 57) (:S 4) (:F 21) (:L 180) (:F 99) (:W 5) (:F 20) (:L 180) (:S 3) (:R 90) (:N 5) (:R 180) (:N 4) (:F 53) (:L 90) (:W 4) (:R 90) (:N 1) (:W 2) (:S 4) (:F 50) (:E 1) (:S 3) (:L 180) (:F 38) (:E 2) (:F 97) (:E 2) (:F 50) (:L 90) (:F 21) (:L 90) (:F 10) (:L 90) (:N 3) (:F 55) (:E 1) (:F 99) (:R 90) (:E 4) (:N 2) (:W 2) (:L 90) (:N 2) (:W 4) (:S 5) (:R 270) (:E 5) (:L 90) (:F 27) (:E 3) (:R 90) (:F 93) (:E 3) (:R 90) (:E 5) (:L 270) (:E 1) (:S 1) (:E 4) (:F 88) (:R 270) (:N 5) (:F 2) (:N 1) (:R 270) (:E 5) (:L 90) (:F 82) (:L 180) (:F 52) (:R 90) (:W 5) (:F 61) (:W 3) (:F 1) (:W 5) (:R 180) (:F 78) (:S 3) (:L 270) (:W 4) (:N 1) (:F 83) (:W 1) (:L 270) (:N 4) (:F 23) (:N 1) (:E 1) (:S 5) (:L 90) (:S 5) (:E 1) (:R 180) (:E 4) (:F 98) (:N 5) (:R 90) (:F 18) (:R 90) (:F 10) (:L 90) (:F 100) (:L 90) (:W 3) (:S 2) (:E 2) (:N 1) (:W 4) (:F 3) (:W 1) (:L 90) (:F 42) (:S 4) (:E 5) (:L 90) (:F 13) (:S 5) (:F 82) (:S 2) (:W 3) (:N 5) (:F 50) (:W 4) (:F 50) (:L 90) (:F 2) (:F 26) (:W 2) (:N 3) (:F 2) (:S 3) (:F 94) (:S 2) (:E 3) (:S 5) (:E 4) (:S 1) (:F 17) (:N 4) (:W 1) (:L 90) (:W 5) (:N 4) (:E 5) (:F 31) (:R 270) (:E 3) (:F 21) (:E 5) (:F 62) (:W 1) (:N 5) (:F 43) (:R 90) (:S 4) (:F 81) (:W 3) (:S 4) (:L 90) (:E 2) (:L 90) (:S 1) (:F 67) (:W 3) (:R 180) (:W 2) (:F 76) (:F 96) (:R 90) (:F 72) (:E 2) (:R 90) (:N 5) (:E 3) (:E 1) (:F 87) (:E 3) (:L 90) (:S 2) (:L 90) (:S 3) (:W 1) (:R 90) (:S 2) (:E 1) (:L 180) (:F 82) (:E 5) (:F 91) (:N 4) (:R 90) (:W 3) (:S 5) (:E 2) (:F 74) (:S 5) (:F 32) (:S 5) (:L 180) (:N 3) (:R 90) (:N 1) (:F 11) (:E 3) (:F 9) (:N 3) (:F 83) (:E 3) (:F 51) (:R 90) (:S 1) (:F 19) (:L 180) (:F 61) (:R 180) (:E 4) (:F 34) (:S 5) (:R 180) (:S 1) (:W 4) (:N 4) (:R 90) (:W 1) (:F 23) (:W 2) (:F 93) (:E 1) (:S 4) (:F 6) (:E 1) (:E 5) (:F 82) (:E 1) (:S 1) (:E 3) (:R 180) (:E 5) (:F 71) (:N 1) (:L 90) (:N 3) (:W 1) (:F 94) (:R 270) (:F 33) (:N 2) (:R 90) (:E 1) (:F 52) (:N 4) (:W 1) (:L 90) (:S 1) (:F 71) (:N 4) (:R 180) (:S 1) (:E 1) (:S 4) (:F 29) (:W 4) (:L 90) (:F 43) (:L 90) (:F 13) (:W 2) (:S 3) (:W 4) (:N 5) (:W 3) (:F 41) (:E 2) (:F 69) (:L 90) (:F 4) (:W 1) (:F 77) (:N 5) (:F 17) (:E 1) (:F 99) (:S 2) (:E 5) (:L 90) (:F 92) (:R 90) (:E 3) (:R 90) (:N 1) (:F 19) (:S 1) (:R 90) (:W 5) (:N 5) (:L 90) (:S 1) (:E 2) (:N 2) (:E 3) (:S 1) (:F 76) (:E 2) (:S 4) (:L 90) (:F 32) (:N 1) (:W 1) (:F 12) (:E 2) (:W 2) (:F 19) (:S 1) (:F 94) (:N 3) (:F 72) (:L 180) (:F 4) (:N 4) (:W 5) (:F 82) (:W 3) (:F 30) (:S 5) (:F 21) (:S 1) (:W 3) (:R 90) (:W 5) (:L 270) (:N 1) (:W 3) (:S 1) (:W 5) (:F 45) (:R 90) (:N 1) (:R 90) (:F 21) (:N 2) (:F 42) (:L 90) (:F 72) (:N 5) (:F 85) (:W 2) (:F 68) (:F 20) (:W 3) (:S 1) (:W 4) (:S 3) (:F 59) (:N 1) (:L 90) (:E 5) (:N 1) (:R 90) (:S 5) (:F 56) (:W 2) (:S 1) (:F 3) (:N 4) (:W 3) (:F 89) (:E 5) (:N 3) (:E 3) (:N 5) (:W 4) (:F 5) (:R 90) (:W 3) (:E 3) (:R 270) (:E 2) (:N 4) (:F 68) (:R 90) (:N 1) (:L 90) (:S 3) (:F 59) (:S 2) (:F 98) (:R 90) (:S 2) (:L 90) (:F 59) (:F 97) (:E 5) (:F 20) (:S 5) (:F 67) (:W 3) (:F 100) (:W 2) (:R 90) (:N 2) (:E 4) (:L 180) (:S 5) (:R 90) (:E 2) (:S 1) (:L 90) (:S 1) (:F 38) (:N 3) (:W 4) (:F 47) (:E 3) (:S 5) (:F 65) (:N 3) (:F 10) (:W 4) (:N 5) (:L 90) (:N 3) (:L 90) (:F 64) (:S 2) (:L 90) (:E 5) (:S 2) (:E 3) (:N 5) (:F 82) (:R 180) (:F 97) (:S 2) (:E 5) (:R 90) (:W 2) (:R 90) (:F 67) (:L 180) (:E 3) (:N 2) (:S 4) (:N 5) (:R 90) (:E 1) (:F 81) (:R 180) (:N 3) (:R 90) (:E 2) (:N 3) (:W 3) (:W 1) (:S 3) (:L 90) (:F 72))
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:88).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+clojure.lang.Numbers/ops (Numbers.java:1068)
+clojure.lang.Numbers/minus (Numbers.java:162)
+clojure.core/- (core.clj:1051)
+clojure.core/- (core.clj:1043)
+aoc2020.aoc2020day12/turn (aoc2020day12.clj:88)
+aoc2020.aoc2020day12/turn (aoc2020day12.clj:84)
+aoc2020.aoc2020day12/action (aoc2020day12.clj:116)
+aoc2020.aoc2020day12/action (aoc2020day12.clj:108)
+clojure.lang.ArrayChunk/reduce (ArrayChunk.java:63)
+clojure.core.protocols/fn (protocols.clj:136)
+clojure.core.protocols/fn (protocols.clj:124)
+clojure.core.protocols/fn (protocols.clj:19)
+clojure.core.protocols/seq-reduce (protocols.clj:31)
+clojure.core.protocols/fn (protocols.clj:75)
+clojure.core.protocols/fn (protocols.clj:13)
+clojure.core/reduce (core.clj:6828)
+clojure.core/reduce (core.clj:6810)
+aoc2020.aoc2020day12/navigate (aoc2020day12.clj:120)
+aoc2020.aoc2020day12/navigate (aoc2020day12.clj:118)
+aoc2020.aoc2020day12/eval17900 (form-init14045267555797649274.clj:130)
+clojure.lang.Compiler/eval (Compiler.java:7176)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/space
+clj꞉aoc2020.aoc2020day12꞉> 
+[17 -8 180 nil]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[17 -8 180 nil]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:84).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> *e
+#error {
+ :cause "Assert failed: (number? deg)"
+ :via
+ [{:type java.lang.AssertionError
+   :message "Assert failed: (number? deg)"
+   :at [aoc2020.aoc2020day12$turn invokeStatic "aoc2020day12.clj" 84]}]
+ :trace
+ [[aoc2020.aoc2020day12$turn invokeStatic "aoc2020day12.clj" 84]
+  [aoc2020.aoc2020day12$turn invoke "aoc2020day12.clj" 84]
+  [aoc2020.aoc2020day12$action invokeStatic "aoc2020day12.clj" 117]
+  [aoc2020.aoc2020day12$action invoke "aoc2020day12.clj" 109]
+  [clojure.lang.ArrayChunk reduce "ArrayChunk.java" 63]
+  [clojure.core.protocols$fn__8139 invokeStatic "protocols.clj" 136]
+  [clojure.core.protocols$fn__8139 invoke "protocols.clj" 124]
+  [clojure.core.protocols$fn__8099$G__8094__8108 invoke "protocols.clj" 19]
+  [clojure.core.protocols$seq_reduce invokeStatic "protocols.clj" 31]
+  [clojure.core.protocols$fn__8131 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8131 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8073$G__8068__8086 invoke "protocols.clj" 13]
+  [clojure.core$reduce invokeStatic "core.clj" 6828]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [aoc2020.aoc2020day12$navigate invokeStatic "aoc2020day12.clj" 121]
+  [aoc2020.aoc2020day12$navigate invoke "aoc2020day12.clj" 119]
+  [aoc2020.aoc2020day12$eval19577 invokeStatic "form-init14045267555797649274.clj" 131]
+  [aoc2020.aoc2020day12$eval19577 invoke "form-init14045267555797649274.clj" 131]
+  [clojure.lang.Compiler eval "Compiler.java" 7176]
+  [clojure.lang.Compiler eval "Compiler.java" 7131]
+  [clojure.core$eval invokeStatic "core.clj" 3214]
+  [clojure.core$eval invoke "core.clj" 3210]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964$fn__965 invoke "interruptible_eval.clj" 87]
+  [clojure.lang.AFn applyToHelper "AFn.java" 152]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 665]
+  [clojure.core$with_bindings_STAR_ invokeStatic "core.clj" 1973]
+  [clojure.core$with_bindings_STAR_ doInvoke "core.clj" 1973]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964 invoke "interruptible_eval.clj" 87]
+  [clojure.main$repl$read_eval_print__9068$fn__9071 invoke "main.clj" 414]
+  [clojure.main$repl$read_eval_print__9068 invoke "main.clj" 414]
+  [clojure.main$repl$fn__9077 invoke "main.clj" 435]
+  [clojure.main$repl invokeStatic "main.clj" 435]
+  [clojure.main$repl doInvoke "main.clj" 345]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__995$fn__999 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1062$fn__1066 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1062 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 834]]}
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/action (aoc2020day12.clj:109).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+#'aoc2020.aoc2020day12/bc
+clj꞉aoc2020.aoc2020day12꞉> 
+"1 2 3"
+clj꞉aoc2020.aoc2020day12꞉> 
+"1 2 3"
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/action (aoc2020day12.clj:109).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+"0   0 [3 4]"
+clj꞉aoc2020.aoc2020day12꞉> 
+"0   0 [3 4]"
+clj꞉aoc2020.aoc2020day12꞉> 
+"0 0 90 [3 4]"
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+"0 0 90 [3 4]"
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/bc
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:84).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+(:R 90)
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/action
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:84).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:84).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (AssertionError) at aoc2020.aoc2020day12/turn (aoc2020day12.clj:84).
+; Assert failed: (number? deg)
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/dist
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/abs
+clj꞉aoc2020.aoc2020day12꞉> 
+#'aoc2020.aoc2020day12/navigate
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 110 nil]
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 180 nil]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[2534 2462 270]
+clj꞉aoc2020.aoc2020day12꞉> 
+4996
+clj꞉aoc2020.aoc2020day12꞉> 
+[2534 2462 270]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[17 -8 180]
+clj꞉aoc2020.aoc2020day12꞉> 
+[17 -8 180]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[17 -8 180]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[700 -1256 270]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Syntax error compiling at (aoc2020day12.clj:132:5).
+; Unable to resolve symbol: a in this context
+clj꞉aoc2020.aoc2020day12꞉> 
+1956
+clj꞉aoc2020.aoc2020day12꞉> 
+; Syntax error compiling at (aoc2020day12.clj:135:1).
+; Unable to resolve symbol: len in this context
+clj꞉aoc2020.aoc2020day12꞉> 
+; Syntax error compiling at (aoc2020day12.clj:135:1).
+; Unable to resolve symbol: size in this context
+clj꞉aoc2020.aoc2020day12꞉> 
+; Syntax error compiling at (aoc2020day12.clj:135:1).
+; Unable to resolve symbol: length in this context
+clj꞉aoc2020.aoc2020day12꞉> 
+4
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+#'aoc2020.aoc2020day12/navigate-p2
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate (aoc2020day12.clj:142).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate (aoc2020day12.clj:142).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (NullPointerException) compiling at (aoc2020day12.clj:170:1).
+; null
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+*e
+#error {
+ :cause nil
+ :via
+ [{:type clojure.lang.Compiler$CompilerException
+   :message "Syntax error compiling at (/Users/jaeyeon/Projects/clojure_practice/four-clojure/src/aoc2020/aoc2020day12.clj:170:1)."
+   :data #:clojure.error{:phase :compile-syntax-check, :line 170, :column 1, :source "/Users/jaeyeon/Projects/clojure_practice/four-clojure/src/aoc2020/aoc2020day12.clj"}
+   :at [clojure.lang.Compiler load "Compiler.java" 7647]}
+  {:type java.lang.NullPointerException
+   :message nil
+   :at [clojure.lang.Numbers ops "Numbers.java" 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops "Numbers.java" 1068]
+  [clojure.lang.Numbers minus "Numbers.java" 129]
+  [aoc2020.aoc2020day12$rotate invokeStatic "aoc2020day12.clj" 142]
+  [aoc2020.aoc2020day12$rotate invoke "aoc2020day12.clj" 137]
+  [aoc2020.aoc2020day12$action_p2 invokeStatic "aoc2020day12.clj" 164]
+  [aoc2020.aoc2020day12$action_p2 invoke "aoc2020day12.clj" 157]
+  [clojure.lang.ArrayChunk reduce "ArrayChunk.java" 63]
+  [clojure.core.protocols$fn__8139 invokeStatic "protocols.clj" 136]
+  [clojure.core.protocols$fn__8139 invoke "protocols.clj" 124]
+  [clojure.core.protocols$fn__8099$G__8094__8108 invoke "protocols.clj" 19]
+  [clojure.core.protocols$seq_reduce invokeStatic "protocols.clj" 31]
+  [clojure.core.protocols$fn__8131 invokeStatic "protocols.clj" 75]
+  [clojure.core.protocols$fn__8131 invoke "protocols.clj" 75]
+  [clojure.core.protocols$fn__8073$G__8068__8086 invoke "protocols.clj" 13]
+  [clojure.core$reduce invokeStatic "core.clj" 6828]
+  [clojure.core$reduce invoke "core.clj" 6810]
+  [aoc2020.aoc2020day12$navigate_p2 invokeStatic "aoc2020day12.clj" 168]
+  [aoc2020.aoc2020day12$navigate_p2 invoke "aoc2020day12.clj" 166]
+  [aoc2020.aoc2020day12$eval27796 invokeStatic "aoc2020day12.clj" 170]
+  [aoc2020.aoc2020day12$eval27796 invoke "aoc2020day12.clj" 170]
+  [clojure.lang.Compiler eval "Compiler.java" 7176]
+  [clojure.lang.Compiler load "Compiler.java" 7635]
+  [aoc2020.aoc2020day12$eval27697 invokeStatic "form-init14045267555797649274.clj" 1]
+  [aoc2020.aoc2020day12$eval27697 invoke "form-init14045267555797649274.clj" 1]
+  [clojure.lang.Compiler eval "Compiler.java" 7176]
+  [clojure.lang.Compiler eval "Compiler.java" 7131]
+  [clojure.core$eval invokeStatic "core.clj" 3214]
+  [clojure.core$eval invoke "core.clj" 3210]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964$fn__965 invoke "interruptible_eval.clj" 87]
+  [clojure.lang.AFn applyToHelper "AFn.java" 152]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 665]
+  [clojure.core$with_bindings_STAR_ invokeStatic "core.clj" 1973]
+  [clojure.core$with_bindings_STAR_ doInvoke "core.clj" 1973]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [nrepl.middleware.interruptible_eval$evaluate$fn__964 invoke "interruptible_eval.clj" 87]
+  [clojure.main$repl$read_eval_print__9068$fn__9071 invoke "main.clj" 414]
+  [clojure.main$repl$read_eval_print__9068 invoke "main.clj" 414]
+  [clojure.main$repl$fn__9077 invoke "main.clj" 435]
+  [clojure.main$repl invokeStatic "main.clj" 435]
+  [clojure.main$repl doInvoke "main.clj" 345]
+  [clojure.lang.RestFn invoke "RestFn.java" 1523]
+  [nrepl.middleware.interruptible_eval$evaluate invokeStatic "interruptible_eval.clj" 84]
+  [nrepl.middleware.interruptible_eval$evaluate invoke "interruptible_eval.clj" 56]
+  [nrepl.middleware.interruptible_eval$interruptible_eval$fn__995$fn__999 invoke "interruptible_eval.clj" 152]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [nrepl.middleware.session$session_exec$main_loop__1062$fn__1066 invoke "session.clj" 202]
+  [nrepl.middleware.session$session_exec$main_loop__1062 invoke "session.clj" 201]
+  [clojure.lang.AFn run "AFn.java" 22]
+  [java.lang.Thread run "Thread.java" 834]]}
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (NullPointerException) compiling at (aoc2020day12.clj:173:1).
+; null
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate (aoc2020day12.clj:143).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+((:R 90)
+ (:S 1)
+ (:R 90)
+ (:W 2)
+ (:S 3)
+ (:L 270)
+ (:L 90)
+ (:S 2)
+ (:F 2)
+ (:L 90)
+ (:W 2)
+ (:S 5)
+ (:E 2)
+ (:S 5)
+ (:F 42)
+ (:W 5)
+ (:L 90)
+ (:F 15)
+ (:R 90)
+ (:S 2)
+ (:F 76)
+ (:E 1)
+ (:F 26)
+ (:R 90)
+ (:W 1)
+ (:L 90)
+ (:W 1)
+ (:F 20)
+ (:L 180)
+ (:F 38)
+ (:S 2)
+ (:W 5)
+ (:F 13)
+ (:N 3)
+ (:E 2)
+ (:N 4)
+ (:L 90)
+ (:N 1)
+ (:E 4)
+ (:L 90)
+ (:E 2)
+ (:F 21)
+ (:R 90)
+ (:N 5)
+ (:F 78)
+ (:E 3)
+ (:L 90)
+ (:W 4)
+ (:S 2)
+ (:R 180)
+ ...)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate (aoc2020day12.clj:143).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+clojure.lang.Numbers/ops (Numbers.java:1068)
+clojure.lang.Numbers/minus (Numbers.java:129)
+aoc2020.aoc2020day12/rotate (aoc2020day12.clj:143)
+aoc2020.aoc2020day12/rotate (aoc2020day12.clj:137)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:167)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:160)
+clojure.lang.ArrayChunk/reduce (ArrayChunk.java:63)
+clojure.core.protocols/fn (protocols.clj:136)
+clojure.core.protocols/fn (protocols.clj:124)
+clojure.core.protocols/fn (protocols.clj:19)
+clojure.core.protocols/seq-reduce (protocols.clj:31)
+clojure.core.protocols/fn (protocols.clj:75)
+clojure.core.protocols/fn (protocols.clj:13)
+clojure.core/reduce (core.clj:6828)
+clojure.core/reduce (core.clj:6810)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:171)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:169)
+aoc2020.aoc2020day12/eval27951 (form-init14045267555797649274.clj:173)
+clojure.lang.Compiler/eval (Compiler.java:7176)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (NullPointerException) compiling at (aoc2020day12.clj:175:1).
+; null
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (IllegalArgumentException) at aoc2020.aoc2020day12/rotate (aoc2020day12.clj:140).
+; No matching clause: [:R 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 1 -10]
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 -1 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 -1 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate-waypoint (aoc2020day12.clj:143).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (NullPointerException) compiling at (aoc2020day12.clj:178:1).
+; null
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (NullPointerException) at aoc2020.aoc2020day12/rotate-waypoint (aoc2020day12.clj:143).
+; null
+clj꞉aoc2020.aoc2020day12꞉> 
+clojure.lang.Numbers/ops (Numbers.java:1068)
+clojure.lang.Numbers/minus (Numbers.java:129)
+aoc2020.aoc2020day12/rotate-waypoint (aoc2020day12.clj:143)
+aoc2020.aoc2020day12/rotate-waypoint (aoc2020day12.clj:137)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:167)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:160)
+clojure.lang.ArrayChunk/reduce (ArrayChunk.java:63)
+clojure.core.protocols/fn (protocols.clj:136)
+clojure.core.protocols/fn (protocols.clj:124)
+clojure.core.protocols/fn (protocols.clj:19)
+clojure.core.protocols/seq-reduce (protocols.clj:31)
+clojure.core.protocols/fn (protocols.clj:75)
+clojure.core.protocols/fn (protocols.clj:13)
+clojure.core/reduce (core.clj:6828)
+clojure.core/reduce (core.clj:6810)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:171)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:169)
+aoc2020.aoc2020day12/eval28544 (form-init14045267555797649274.clj:178)
+clojure.lang.Compiler/eval (Compiler.java:7176)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (AssertionError) compiling at (aoc2020day12.clj:179:1).
+; Assert failed: ew
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+; Syntax error (ArithmeticException) compiling at (aoc2020day12.clj:180:1).
+; integer overflow
+; Evaluation of file aoc2020day12.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉aoc2020.aoc2020day12꞉> 
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 -1 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (ArithmeticException) at aoc2020.aoc2020day12/forward-by-waypoint (aoc2020day12.clj:151).
+; integer overflow
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (ArithmeticException) at aoc2020.aoc2020day12/forward-by-waypoint (aoc2020day12.clj:151).
+; integer overflow
+clj꞉aoc2020.aoc2020day12꞉> 
+clojure.lang.Numbers/throwIntOverflow (Numbers.java:1576)
+clojure.lang.Numbers/multiply (Numbers.java:1960)
+clojure.lang.Numbers$LongOps/multiply (Numbers.java:501)
+clojure.lang.Numbers/multiply (Numbers.java:173)
+aoc2020.aoc2020day12/forward-by-waypoint (aoc2020day12.clj:151)
+aoc2020.aoc2020day12/forward-by-waypoint (aoc2020day12.clj:147)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:171)
+aoc2020.aoc2020day12/action-p2 (aoc2020day12.clj:163)
+clojure.lang.ArrayChunk/reduce (ArrayChunk.java:63)
+clojure.core.protocols/fn (protocols.clj:136)
+clojure.core.protocols/fn (protocols.clj:124)
+clojure.core.protocols/fn (protocols.clj:19)
+clojure.core.protocols/seq-reduce (protocols.clj:31)
+clojure.core.protocols/fn (protocols.clj:75)
+clojure.core.protocols/fn (protocols.clj:13)
+clojure.core/reduce (core.clj:6828)
+clojure.core/reduce (core.clj:6810)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:175)
+aoc2020.aoc2020day12/navigate-p2 (aoc2020day12.clj:173)
+aoc2020.aoc2020day12/eval29156 (form-init14045267555797649274.clj:179)
+clojure.lang.Compiler/eval (Compiler.java:7176)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Execution error (ArithmeticException) at aoc2020.aoc2020day12/forward-by-waypoint (aoc2020day12.clj:151).
+; integer overflow
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 -1 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+[0 0 -1 10]
+clj꞉aoc2020.aoc2020day12꞉> 
+[91964 -34833 -26 -43]
+clj꞉aoc2020.aoc2020day12꞉> 
+; Evaluating file: aoc2020day12.clj
+nil
+clj꞉aoc2020.aoc2020day12꞉> 
+; Syntax error macroexpanding clojure.core/fn at (aoc2020day12.clj:179:3).
+; (navigate-p2 space) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+navigate-p2 - failed: vector? at: [:fn-tail :arity-n :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉aoc2020.aoc2020day12꞉> 
+[91964 -34833 -26 -43]
+clj꞉aoc2020.aoc2020day12꞉> 
+126797
+clj꞉aoc2020.aoc2020day12꞉> 
+126797
+clj꞉aoc2020.aoc2020day12꞉> 
